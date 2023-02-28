@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -92,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    ItemModel user = snapshot.getValue(ItemModel.class);
+                    ItemModel user = dataSnapshot.getValue(ItemModel.class);
+                    Log.i("TAG", user.phoneNumber + " " + user.group +" " + user.username);
                     list.add(user);
                 }
                 userAdapter.notifyDataSetChanged();

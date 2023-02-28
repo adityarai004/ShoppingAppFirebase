@@ -31,7 +31,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         ItemModel user = itemModelArrayList.get(position);
         holder.username.setText(user.getUsername());
-        holder.phoneNumber.setText(user.getPhoneNumber());
+        holder.phoneNumber.setText(user.getPhoneNumber().toString());
         holder.group.setText(user.getGroup());
     }
 
