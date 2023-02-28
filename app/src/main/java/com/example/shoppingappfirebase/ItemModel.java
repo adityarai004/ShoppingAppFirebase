@@ -1,7 +1,8 @@
 package com.example.shoppingappfirebase;
 
 public class ItemModel {
-    String username,phoneNumber,group;
+    String username,group;
+    Long phoneNumber;
 
     public String getUsername() {
         return username;
@@ -11,11 +12,11 @@ public class ItemModel {
         this.username = username;
     }
 
-    public String getPhoneNumber() {
+    public Long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -27,7 +28,7 @@ public class ItemModel {
         this.group = group;
     }
 
-    public ItemModel(String username, String phoneNumber, String group) {
+    public ItemModel(String username, Long phoneNumber, String group) {
         this.username = username;
         this.phoneNumber = phoneNumber;
         this.group = group;
